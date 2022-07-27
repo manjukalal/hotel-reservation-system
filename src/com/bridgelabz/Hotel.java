@@ -8,6 +8,7 @@ public class Hotel {
     int weekendRewardRate;
     int rating;
     int Total;
+
     public Hotel(String hotelName, int weekdayRegularRate, int weekdayRewardRate, int weekendRegularRate, int weekendRewardRate, int rating) {
         this.hotelName = hotelName;
         this.weekdayRegularRate = weekdayRegularRate;
@@ -16,31 +17,40 @@ public class Hotel {
         this.weekendRewardRate = weekendRewardRate;
         this.rating = rating;
     }
+
     public Hotel() {
     }
+
     public String getHotelName() {
         return hotelName;
     }
+
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
     }
+
     public int getWeekdayRegularRate() {
         return weekdayRegularRate;
     }
+
     public void setWeekdayRegularRate(int weekdayRegularRate) {
         this.weekdayRegularRate = weekdayRegularRate;
     }
+
     public int getWeekendRegularRate() {
         return weekendRegularRate;
     }
+
     public void setWeekendRegularRate(int weekendRegularRate) {
         this.weekendRegularRate = weekendRegularRate;
     }
-    public void setTotal(int total) {
-        Total = total;
-    }
+
     public int getTotal() {
         return Total;
+    }
+
+    public void setTotal(int total) {
+        Total = total;
     }
 
     public int getRating() {
@@ -69,13 +79,6 @@ public class Hotel {
 
     @Override
     public String toString() {
-        return "Hotel{" +
-                "hotelName='" + hotelName + '\'' +
-                ", weekdayRegularRate=" + weekdayRegularRate +
-                ", weekendRegularRate=" + weekendRegularRate +
-                ", weekdayRewardRate=" + weekdayRewardRate +
-                ", weekendRewardRate=" + weekendRewardRate +
-                ", rating=" + rating +
-                '}';
+        return "Hotel{" + "hotelName='" + hotelName + '\'' + ", weekdayRegularRate=" + weekdayRegularRate + ", weekendRegularRate=" + weekendRegularRate + ", weekdayRewardRate=" + weekdayRewardRate + ", weekendRewardRate=" + weekendRewardRate + ", rating=" + rating + '}';
     }
 }
