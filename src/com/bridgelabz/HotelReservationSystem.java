@@ -25,5 +25,11 @@ public class HotelReservationSystem {
         System.out.println("*Cheapest best Rated Hotel Based on WeekendRegularRate");
         hotelSetup.findCheapestHotelRatingForRegular("01-Jan-2021","05-Jan-2021");
         System.out.println(" ");
+
+        System.out.println(" ");
+        System.out.println("Cheapest best Rated Hotel Based on WeekendRewardRate");
+        hotelSetup.findCheapestHotelRaitingForReward("01-Jan-2021","05-Jan-2021");
+        System.out.println(" ");
+
     }
 }
