@@ -68,8 +68,8 @@ public class HotelSetup {
 
     public void findCheapestHotelRatingForRegular(String startDateRange, String endDateRange) {
 
-        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
-        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
 
         int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
 
@@ -80,9 +80,9 @@ public class HotelSetup {
         hotel.setTotal(cheapestHotel.get().getWeekendRegularRate() * numberOfDays);
         hotel.setRating(cheapestHotel.get().getRating());
 
-        System.out.println("-HotelName :" + hotel.getHotelName());
-        System.out.println("-NumberOfDaysStayed * WeekendRegularRate :" + hotel.getTotal() + "$");
-        System.out.println("-Raiting :" + hotel.getRating());
+        System.out.println("HotelName :" + hotel.getHotelName());
+        System.out.println("NumberOfDaysStayed  WeekendRegularRate :" + hotel.getTotal() + "$");
+        System.out.println("Raiting :" + hotel.getRating());
 
     }
 }
