@@ -6,41 +6,49 @@ public class Hotel {
     int weekendRegularRate;
     int weekdayRewardRate;
     int weekendRewardRate;
-    int ratings;
-    int total;
-
-    public Hotel(String hotelName, int weekdayRegularRate, int weekendRegularRate, int weekdayRewardRate, int weekendRewardRate, int ratings) {
+    int rating;
+    int Total;
+    public Hotel(String hotelName, int weekdayRegularRate, int weekdayRewardRate, int weekendRegularRate, int weekendRewardRate, int rating) {
         this.hotelName = hotelName;
         this.weekdayRegularRate = weekdayRegularRate;
-        this.weekendRegularRate = weekendRegularRate;
         this.weekdayRewardRate = weekdayRewardRate;
+        this.weekendRegularRate = weekendRegularRate;
         this.weekendRewardRate = weekendRewardRate;
-        this.ratings = ratings;
-        this.total = total;
+        this.rating = rating;
     }
-
+    public Hotel() {
+    }
     public String getHotelName() {
         return hotelName;
     }
-
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
     }
-
     public int getWeekdayRegularRate() {
         return weekdayRegularRate;
     }
-
     public void setWeekdayRegularRate(int weekdayRegularRate) {
         this.weekdayRegularRate = weekdayRegularRate;
     }
-
     public int getWeekendRegularRate() {
         return weekendRegularRate;
     }
-
     public void setWeekendRegularRate(int weekendRegularRate) {
         this.weekendRegularRate = weekendRegularRate;
+    }
+    public void setTotal(int total) {
+        Total = total;
+    }
+    public int getTotal() {
+        return Total;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     public int getWeekdayRewardRate() {
@@ -59,22 +67,6 @@ public class Hotel {
         this.weekendRewardRate = weekendRewardRate;
     }
 
-    public int getRatings() {
-        return ratings;
-    }
-
-    public void setRatings(int ratings) {
-        this.ratings = ratings;
-    }
-
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
     @Override
     public String toString() {
         return "Hotel{" +
@@ -83,8 +75,7 @@ public class Hotel {
                 ", weekendRegularRate=" + weekendRegularRate +
                 ", weekdayRewardRate=" + weekdayRewardRate +
                 ", weekendRewardRate=" + weekendRewardRate +
-                ", ratings=" + ratings +
-                ", total=" + total +
+                ", rating=" + rating +
                 '}';
     }
 }
