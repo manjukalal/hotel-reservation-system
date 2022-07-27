@@ -2,7 +2,6 @@ package com.bridgelabz;
 
 public class HotelReservationSystem {
 
-
     public static void main(String[] args) {
         System.out.println("Welcome to Hotel Reservation System");
         HotelSetup hotelSetup = new HotelSetup();
@@ -20,5 +19,7 @@ public class HotelReservationSystem {
         System.out.println("Cheapest Hotel Based on WeekendRegularRate");
         hotelSetup.findCheapestHotelTwo("01-Jan-2021","05-Jan-2021");
         System.out.println(" ");
+
+
     }
 }

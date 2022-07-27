@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -20,20 +19,20 @@ public class HotelSetup {
         myHotelList.add(BridgeWood);
         myHotelList.add(RidgeWood);
 //        System.out.println(myHotelList);
-    }
 
+    }
     public void showHotelInfo() {
 
         for (int i = 0; i < myHotelList.size(); i++) {
             System.out.println(myHotelList.get(i));
+
         }
     }
 
-
     public void findCheapestHotelOne(String startDateRange, String endDateRange) {
 
-        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
-        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
 
         int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
 
@@ -50,8 +49,8 @@ public class HotelSetup {
 
     public void findCheapestHotelTwo(String startDateRange, String endDateRange) {
 
-        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
-        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
 
         int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
 
@@ -65,8 +64,5 @@ public class HotelSetup {
         System.out.println("NumberOfDaysStayed  WeekendRegularRate :" + hotel.getTotal() + "$");
 
     }
-
-
-
 
 }
