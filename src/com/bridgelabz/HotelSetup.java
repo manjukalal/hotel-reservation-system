@@ -21,6 +21,7 @@ public class HotelSetup {
 //        System.out.println(myHotelList);
 
     }
+
     public void showHotelInfo() {
 
         for (int i = 0; i < myHotelList.size(); i++) {
@@ -44,7 +45,7 @@ public class HotelSetup {
         hotel.setRating(cheapestHotel.get().getRating());
         System.out.println("HotelName :" + hotel.getHotelName());
         System.out.println("NumberOfDaysStayed  WeekdayRegularRate :" + hotel.getTotal() + "$");
-        System.out.println("hotel rating: " +hotel.getRating());
+        System.out.println("hotel rating: " + hotel.getRating());
     }
 
     public void findCheapestHotelTwo(String startDateRange, String endDateRange) {
@@ -62,7 +63,7 @@ public class HotelSetup {
         hotel.setRating(cheapestHotel.get().getRating());
         System.out.println("HotelName :" + hotel.getHotelName());
         System.out.println("NumberOfDaysStayed  WeekendRegularRate :" + hotel.getTotal() + "$");
-        System.out.println("hotel ratings: " +hotel.getRating());
+        System.out.println("hotel ratings: " + hotel.getRating());
 
     }
 
@@ -104,4 +105,24 @@ public class HotelSetup {
         System.out.println("NumberOfDaysStayed  WeekendRewardRate :" + hotel.getTotal() + "$");
         System.out.println("Raiting :" + hotel.getRating());
     }
+
+    public void findCheapestHotelRaitingForRewardTwo(String startDateRange, String endDateRange) {
+
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+
+        int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
+
+        Optional<Hotel> cheapestHotel = this.myHotelList.stream().sorted(Comparator.comparing(Hotel::getWeekdayRewardRate)).findFirst();
+
+        Hotel hotel = new Hotel();
+        hotel.setHotelName(cheapestHotel.get().getHotelName());
+        hotel.setTotal(cheapestHotel.get().getWeekdayRewardRate() * numberOfDays);
+        hotel.setRating(cheapestHotel.get().getRating());
+
+        System.out.println("HotelName :" + hotel.getHotelName());
+        System.out.println("NumberOfDaysStayed  WeekdayRewardRate :" + hotel.getTotal() + "$");
+        System.out.println("Raiting :" + hotel.getRating());
     }
+
+}
